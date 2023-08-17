@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.smartphone_log_analysis_log'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.smartphone_log_analysis_log"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+//    // Encapsulates your external native build configurations.
+//    externalNativeBuild {
+//        // Encapsulates your CMake build configurations.
+//        cmake {
+//            // Provides a relative path to your CMake build script.
+//            path "fftw-3.3.10/CMakeLists.txt"
+//        }
+//    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+//    implementation 'com.github.wendykierp:JTransforms:3.1'
+}
